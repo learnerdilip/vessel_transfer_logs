@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { TransferTable } from "./TransferTable";
 import { TransferDrawer } from "./TransferDrawer";
 import type { Transfer, Vessel } from "../types/types";
@@ -10,6 +10,9 @@ export const Dashboard: React.FC = () => {
     null
   );
   const [loading, setLoading] = useState<boolean>(true);
+  const [selectedVesselMmsi, setSelectedVesselMmsi] = useState<number | "ALL">(
+    "ALL"
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,6 +58,13 @@ export const Dashboard: React.FC = () => {
     }
   };
 
+  const filteredTransfers = useMemo(() => {
+    if (selectedVesselMmsi === "ALL") {
+      return transfers;
+    }
+    return transfers.filter((t) => t.mmsi === selectedVesselMmsi);
+  }, [transfers, selectedVesselMmsi]);
+
   if (loading) return <div className="p-8">Loading dashboard...</div>;
 
   return (
@@ -67,12 +77,37 @@ export const Dashboard: React.FC = () => {
           <p className="mt-2 text-sm text-gray-600">
             Overview of daily transfers
           </p>
+          <div className="w-64">
+            <label
+              htmlFor="vessel-filter"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Filter by Vessel
+            </label>
+            <select
+              id="vessel-filter"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
+              value={selectedVesselMmsi}
+              onChange={(e) => {
+                const val = e.target.value;
+                // Convert string back to number, or keep as 'ALL'
+                setSelectedVesselMmsi(val === "ALL" ? "ALL" : Number(val));
+              }}
+            >
+              <option value="ALL">All Vessels</option>
+              {vessels.map((vessel) => (
+                <option key={vessel.id} value={vessel.mmsi}>
+                  {vessel.nicename}
+                </option>
+              ))}
+            </select>
+          </div>
         </header>
 
         <main>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <TransferTable
-              transfers={transfers}
+              transfers={filteredTransfers}
               vessels={vessels}
               onSelectTransfer={setSelectedTransfer}
             />
