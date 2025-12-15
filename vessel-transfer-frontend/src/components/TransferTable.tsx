@@ -23,6 +23,9 @@ export const TransferTable: React.FC<TransferTableProps> = ({ transfers }) => {
               Location
             </th>
             <th className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+              Duration (Mins)
+            </th>
+            <th className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
               Score
             </th>
             <th className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
@@ -45,6 +48,9 @@ export const TransferTable: React.FC<TransferTableProps> = ({ transfers }) => {
               </td>
               <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                 {transfer.location}
+              </td>
+              <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                {transfer.duration}
               </td>
               <td className="whitespace-nowrap px-3 py-4 text-sm">
                 {/* we take 6 as the cutoff for safety here */}
