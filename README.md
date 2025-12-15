@@ -32,6 +32,7 @@
 
 ### Any trade-offs or decisions worth mentioning
 - Using Docker to make it easier to run on any machine with docker installed. Docker-compose allows to run multiple services without needing to setup project everytime. Dependencies are also contained alsong with versions of various depdendencies
+- Created two branches `main` and `dev`. You should find all on `main` since i merged `dev` into `main` 
 - using Json-server (as recommended) as a seperate service which allows for many REST API like features out of the box
 - Using tailwind to help speed up the process of styling the UI components
 - Chose to make it single page application, to make the user see all in one place. I would assume that its easier to go through the list on one page rather than going back and forth pages
