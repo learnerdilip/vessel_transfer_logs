@@ -7,7 +7,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./json-api/db.json:/app/db.json
+      - ./json-api/db.json:/json-api/db.json
 
   react-frontend:
     build: ./vessel-transfer-frontend
