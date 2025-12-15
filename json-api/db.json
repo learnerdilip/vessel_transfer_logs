@@ -1,0 +1,661 @@
+{
+  "vessels": [
+    {
+      "id": "652e4fc511697824daf63bc5",
+      "vesselname": "Test_BMO",
+      "mmsi": 123456789,
+      "nicename": "MO4 Pioneer",
+      "client": "North Sea Logistics",
+      "operationsClass": "CTV",
+      "vessel_length": 19,
+      "displacement": 38620,
+      "Propulsion_type": "CPP",
+      "Site": "Non Existing Windpark",
+      "Operator": "North Sea Logistics",
+      "onHire": 1
+    },
+    {
+      "id": "652e4fc511697824daf63bc6",
+      "vesselname": "Test_BMO_2",
+      "mmsi": 987654321,
+      "nicename": "Sea Shepherd II",
+      "client": "North Sea Logistics",
+      "operationsClass": "CTV",
+      "vessel_length": 24,
+      "displacement": 42500,
+      "Propulsion_type": "CPP",
+      "Site": "Non Existing Windpark",
+      "Operator": "North Sea Logistics",
+      "onHire": 1
+    }
+  ],
+  "transfers": [
+    {
+      "id": "66cc3f817b4cae75b8c6eb62",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739489,
+      "startTime": 739489.35441266,
+      "stopTime": 739489.36887794,
+      "duration": 20.83,
+      "location": "T01",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.8,
+      "score": 8.27,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 154463.47,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb63",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739489,
+      "startTime": 739489.39321995,
+      "stopTime": 739489.40090687,
+      "duration": 11.07,
+      "location": "T02",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.9,
+      "score": 7.73,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 149057.66,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb64",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739489,
+      "startTime": 739489.44346474,
+      "stopTime": 739489.45026827,
+      "duration": 9.8,
+      "location": "T03",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 1.1,
+      "score": 7.04,
+      "detector": "docking",
+      "comment": "Bumpy approach due to swell",
+      "impactForceNmax": 172570.38,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb65",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739489,
+      "startTime": 739489.52012,
+      "stopTime": 739489.53156,
+      "duration": 16.47,
+      "location": "T07",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 1,
+      "score": 8.91,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 98234.12,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb66",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739489,
+      "startTime": 739489.58234,
+      "stopTime": 739489.59012,
+      "duration": 11.21,
+      "location": "T12",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.7,
+      "score": 9.12,
+      "detector": "docking",
+      "comment": "Smooth transfer",
+      "impactForceNmax": 67543.89,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb67",
+      "vesselname": "Sea Shepherd II",
+      "mmsi": 987654321,
+      "date": 739489,
+      "startTime": 739489.36123,
+      "stopTime": 739489.37654,
+      "duration": 22.05,
+      "location": "T31",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.8,
+      "score": 7.89,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 134567.23,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb68",
+      "vesselname": "Sea Shepherd II",
+      "mmsi": 987654321,
+      "date": 739489,
+      "startTime": 739489.42567,
+      "stopTime": 739489.43234,
+      "duration": 9.6,
+      "location": "T32",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.9,
+      "score": 8.45,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 112345.67,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb69",
+      "vesselname": "Sea Shepherd II",
+      "mmsi": 987654321,
+      "date": 739489,
+      "startTime": 739489.51234,
+      "stopTime": 739489.52567,
+      "duration": 19.2,
+      "location": "T37",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 1.2,
+      "score": 6.23,
+      "detector": "docking",
+      "comment": "High swell, difficult approach",
+      "impactForceNmax": 198234.56,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb70",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739490,
+      "startTime": 739490.34123,
+      "stopTime": 739490.35456,
+      "duration": 19.2,
+      "location": "T04",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.5,
+      "score": 9.34,
+      "detector": "docking",
+      "comment": "Excellent conditions",
+      "impactForceNmax": 54321.12,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb71",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739490,
+      "startTime": 739490.39876,
+      "stopTime": 739490.41234,
+      "duration": 19.55,
+      "location": "T05",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.6,
+      "score": 8.87,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 76543.21,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb72",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739490,
+      "startTime": 739490.45678,
+      "stopTime": 739490.46543,
+      "duration": 12.46,
+      "location": "T06",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.7,
+      "score": 8.12,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 89012.34,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb73",
+      "vesselname": "Sea Shepherd II",
+      "mmsi": 987654321,
+      "date": 739490,
+      "startTime": 739490.35234,
+      "stopTime": 739490.36789,
+      "duration": 22.39,
+      "location": "T33",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.4,
+      "score": 9.56,
+      "detector": "docking",
+      "comment": "Textbook transfer",
+      "impactForceNmax": 45678.9,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb74",
+      "vesselname": "Sea Shepherd II",
+      "mmsi": 987654321,
+      "date": 739490,
+      "startTime": 739490.42345,
+      "stopTime": 739490.43678,
+      "duration": 19.2,
+      "location": "T34",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 0.5,
+      "score": 9.23,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 56789.01,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb75",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739491,
+      "startTime": 739491.36543,
+      "stopTime": 739491.38234,
+      "duration": 24.35,
+      "location": "T08",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 1.4,
+      "score": 5.67,
+      "detector": "docking",
+      "comment": "Challenging conditions, multiple approach attempts",
+      "impactForceNmax": 223456.78,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    },
+    {
+      "id": "66cc3f817b4cae75b8c6eb76",
+      "vesselname": "MO4 Pioneer",
+      "mmsi": 123456789,
+      "date": 739491,
+      "startTime": 739491.45678,
+      "stopTime": 739491.46789,
+      "duration": 16,
+      "location": "T09",
+      "fieldname": "Non Existing Windpark",
+      "Hs": 1.3,
+      "score": 6.45,
+      "detector": "docking",
+      "comment": "",
+      "impactForceNmax": 187654.32,
+      "paxUp": 0,
+      "paxDown": 0,
+      "cargoUp": 0,
+      "cargoDown": 0,
+      "active": true
+    }
+  ],
+  "windfarms": [
+    {
+      "id": "5cb49ea6c62c5848bcdc6c65",
+      "filename": "Non_Existing_Windpark_turbine_coordinates",
+      "fieldname": "Non Existing Windpark",
+      "SiteName": "Non Existing Windpark",
+      "centroid": {
+        "lat": 28.267933478261,
+        "lon": -13.275703695652
+      },
+      "turbines": [
+        {
+          "name": "T01",
+          "lat": 28.21904,
+          "lon": -13.38898
+        },
+        {
+          "name": "T02",
+          "lat": 28.25942,
+          "lon": -13.10611
+        },
+        {
+          "name": "T03",
+          "lat": 28.32228,
+          "lon": -13.28335
+        },
+        {
+          "name": "T04",
+          "lat": 28.20795,
+          "lon": -13.39491
+        },
+        {
+          "name": "T05",
+          "lat": 28.20864,
+          "lon": -13.3921
+        },
+        {
+          "name": "T06",
+          "lat": 28.20947,
+          "lon": -13.38944
+        },
+        {
+          "name": "T07",
+          "lat": 28.21098,
+          "lon": -13.39682
+        },
+        {
+          "name": "T08",
+          "lat": 28.21268,
+          "lon": -13.39248
+        },
+        {
+          "name": "T09",
+          "lat": 28.21416,
+          "lon": -13.38901
+        },
+        {
+          "name": "T10",
+          "lat": 28.21529,
+          "lon": -13.38656
+        },
+        {
+          "name": "T11",
+          "lat": 28.2142,
+          "lon": -13.39866
+        },
+        {
+          "name": "T12",
+          "lat": 28.21548,
+          "lon": -13.39257
+        },
+        {
+          "name": "T13",
+          "lat": 28.21692,
+          "lon": -13.38858
+        },
+        {
+          "name": "T14",
+          "lat": 28.21722,
+          "lon": -13.39965
+        },
+        {
+          "name": "T15",
+          "lat": 28.21828,
+          "lon": -13.3927
+        },
+        {
+          "name": "T16",
+          "lat": 28.21004,
+          "lon": -13.38793
+        },
+        {
+          "name": "T17",
+          "lat": 28.21121,
+          "lon": -13.38437
+        },
+        {
+          "name": "T18",
+          "lat": 28.21919,
+          "lon": -13.38957
+        },
+        {
+          "name": "T19",
+          "lat": 28.25602,
+          "lon": -13.11146
+        },
+        {
+          "name": "T21",
+          "lat": 28.25608,
+          "lon": -13.10916
+        },
+        {
+          "name": "T22",
+          "lat": 28.25619,
+          "lon": -13.10747
+        },
+        {
+          "name": "T23",
+          "lat": 28.257,
+          "lon": -13.11169
+        },
+        {
+          "name": "T24",
+          "lat": 28.25706,
+          "lon": -13.10854
+        },
+        {
+          "name": "T25",
+          "lat": 28.25704,
+          "lon": -13.10646
+        },
+        {
+          "name": "T26",
+          "lat": 28.25821,
+          "lon": -13.11114
+        },
+        {
+          "name": "T27",
+          "lat": 28.25852,
+          "lon": -13.10865
+        },
+        {
+          "name": "T28",
+          "lat": 28.25867,
+          "lon": -13.10588
+        },
+        {
+          "name": "T29",
+          "lat": 28.25903,
+          "lon": -13.11083
+        },
+        {
+          "name": "T30",
+          "lat": 28.25935,
+          "lon": -13.10796
+        },
+        {
+          "name": "T31",
+          "lat": 28.32208,
+          "lon": -13.28514
+        },
+        {
+          "name": "T32",
+          "lat": 28.32216,
+          "lon": -13.28418
+        },
+        {
+          "name": "T33",
+          "lat": 28.32246,
+          "lon": -13.28523
+        },
+        {
+          "name": "T34",
+          "lat": 28.3225,
+          "lon": -13.28436
+        },
+        {
+          "name": "T35",
+          "lat": 28.32256,
+          "lon": -13.28339
+        },
+        {
+          "name": "T36",
+          "lat": 28.32261,
+          "lon": -13.28261
+        },
+        {
+          "name": "T37",
+          "lat": 28.32288,
+          "lon": -13.2853
+        },
+        {
+          "name": "T38",
+          "lat": 28.32286,
+          "lon": -13.28418
+        },
+        {
+          "name": "T41",
+          "lat": 28.32286,
+          "lon": -13.28343
+        },
+        {
+          "name": "T42",
+          "lat": 28.32294,
+          "lon": -13.28268
+        },
+        {
+          "name": "T51",
+          "lat": 28.32314,
+          "lon": -13.28533
+        },
+        {
+          "name": "T52",
+          "lat": 28.32317,
+          "lon": -13.28425
+        },
+        {
+          "name": "T53",
+          "lat": 28.32326,
+          "lon": -13.28279
+        },
+        {
+          "name": "T61",
+          "lat": 28.32361,
+          "lon": -13.28297
+        },
+        {
+          "name": "T62",
+          "lat": 28.32349,
+          "lon": -13.28369
+        },
+        {
+          "name": "T63",
+          "lat": 28.3234,
+          "lon": -13.28443
+        },
+        {
+          "name": "T64",
+          "lat": 28.32334,
+          "lon": -13.28538
+        }
+      ],
+      "outline": {
+        "lat": [
+          28.259194567759, 28.328068592315, 28.327769362833, 28.215517279146,
+          28.212399442055, 28.209066612072, 28.205928902196, 28.255876892507,
+          28.25675118382, 28.258425096007, 28.259194567759
+        ],
+        "lon": [
+          -13.101497740823, -13.283567632564, -13.286174483517,
+          -13.403924138991, -13.402891632572, -13.400999077159,
+          -13.399035246557, -13.102863143332, -13.101851469666,
+          -13.101268788215, -13.101497740823
+        ]
+      }
+    }
+  ],
+  "dpr": [
+    {
+      "id": "66cc3f85d74765786d8e1e1d",
+      "date": 739489,
+      "mmsi": 123456789,
+      "vesselname": "MO4 Pioneer",
+      "stats": {
+        "portDepartureTime": 739489.31241266,
+        "windFarmArrivalTime": 739489.34341266,
+        "sailedDistance": 67.2,
+        "avgSpeedOutbound": 18.33,
+        "avgSpeedInbound": 19.91,
+        "msiOutbound": 5.07,
+        "msiInbound": 15.94,
+        "numDockings": 5,
+        "totalFuel": 623,
+        "averageDockedTime": "00:13:54"
+      },
+      "distancekm": 124.45,
+      "fuelConsumed": 623,
+      "minutesInField": 74.27,
+      "inputStats": {
+        "fuelConsumption": 623,
+        "landedOil": 50,
+        "landedGarbage": 0.25,
+        "toolboxConducted": ["Power washing", "Bunkering at fuel barge"],
+        "customInput": "Smooth sailing today!"
+      },
+      "lat": [
+        27.94013, 27.94468, 27.97227, 28.00009, 28.03646, 28.10069, 28.16336,
+        28.21419, 28.21904, 28.21752, 28.21087, 28.2148, 28.25019, 28.25592,
+        28.25942, 28.25911, 28.25669, 28.29906, 28.32445, 28.32415,
+        28.322936672048, 28.32277, 28.32286, 28.3225, 28.32262, 28.32228,
+        28.212, 28.08841, 28.04448, 28.00569, 27.97931, 27.95141, 27.94468,
+        27.94012, 27.94065
+      ],
+      "lon": [
+        -12.9398, -12.95748, -13.03988, -13.13939, -13.24101, -13.33989,
+        -13.36667, -13.39104, -13.38898, -13.39448, -13.39413, -13.38486,
+        -13.27466, -13.1073, -13.10611, -13.10937, -13.10971, -13.21076,
+        -13.27942, -13.28835, -13.283546677246, -13.28303, -13.28389, -13.28397,
+        -13.28359, -13.28335, -13.31724, -13.25613, -13.21768, -13.12635,
+        -13.03846, -12.96396, -12.95748, -12.93425, -12.93271
+      ],
+      "time": [
+        739489.2458, 739489.2638, 739489.2888, 739489.3055, 739489.3166,
+        739489.3277, 739489.3388, 739489.3472, 739489.3555, 739489.3652,
+        739489.3736, 739489.3833, 739489.3916, 739489.3999, 739489.4083,
+        739489.4166, 739489.4291, 739489.4416, 739489.4527, 739489.468,
+        739489.4861, 739489.5041, 739489.5291, 739489.5736, 739489.5749,
+        739489.5763, 739489.5777, 739489.5791, 739489.5805, 739489.6416,
+        739489.643, 739489.6444, 739489.6458, 739489.6472, 739489.6486
+      ]
+    }
+  ]
+}
