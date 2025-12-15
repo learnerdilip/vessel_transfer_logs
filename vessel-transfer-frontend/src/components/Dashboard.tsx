@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from "react";
-
 import { TransferTable } from "./TransferTable";
-import type { Transfer } from "../types/types";
+import { TransferDrawer } from "./TransferDrawer";
+import type { Transfer, Vessel } from "../types/types";
 
 export const Dashboard: React.FC = () => {
   const [transfers, setTransfers] = useState<Transfer[]>([]);
+  const [vessels, setVessels] = useState<Vessel[]>([]);
+  const [selectedTransfer, setSelectedTransfer] = useState<Transfer | null>(
+    null
+  );
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const transfersRes = await fetch("http://localhost:3000/transfers");
+        const [transfersRes, vesselsRes] = await Promise.all([
+          fetch("http://localhost:3000/transfers"),
+          fetch("http://localhost:3000/vessels"),
+        ]);
+
         const transfersData = await transfersRes.json();
+        const vesselsData = await vesselsRes.json();
+
         // console.log(transfersData);
 
         setTransfers(transfersData);
+        setVessels(vesselsData);
       } catch (error) {
         console.error("Failed to fetch data:", error);
       } finally {
@@ -41,9 +52,22 @@ export const Dashboard: React.FC = () => {
 
         <main>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <TransferTable transfers={transfers} />
+            <TransferTable
+              transfers={transfers}
+              vessels={vessels}
+              onSelectTransfer={setSelectedTransfer}
+            />
           </div>
         </main>
+
+        {/* Drawer renders when a transfer is selected */}
+        {selectedTransfer && (
+          <TransferDrawer
+            transfer={selectedTransfer}
+            allVessels={vessels}
+            onClose={() => setSelectedTransfer(null)}
+          />
+        )}
       </div>
     </div>
   );

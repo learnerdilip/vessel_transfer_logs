@@ -1,13 +1,24 @@
 import React from "react";
 
-import type { Transfer } from "../types/types";
+import type { Transfer, Vessel } from "../types/types";
 import { matlabToDate } from "../util/helper";
 
 interface TransferTableProps {
   transfers: Transfer[];
+  vessels: Vessel[];
+  onSelectTransfer: (transfer: Transfer) => void;
 }
 
-export const TransferTable: React.FC<TransferTableProps> = ({ transfers }) => {
+export const TransferTable: React.FC<TransferTableProps> = ({
+  transfers,
+  vessels,
+  onSelectTransfer,
+}) => {
+  const getVesselName = (mmsi: number): string => {
+    const vessel = vessels.find((v) => v.mmsi === mmsi);
+    return vessel ? vessel.nicename : "Unknown Vessel";
+  };
+
   return (
     <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
       <table className="min-w-full divide-y divide-gray-300">
@@ -37,14 +48,14 @@ export const TransferTable: React.FC<TransferTableProps> = ({ transfers }) => {
           {transfers.map((transfer) => (
             <tr
               key={transfer.id}
-              onClick={() => null}
+              onClick={() => onSelectTransfer(transfer)}
               className="cursor-pointer hover:bg-blue-50 transition-colors"
             >
               <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-500">
                 {matlabToDate(transfer.date).toDateString()}
               </td>
               <td className="whitespace-nowrap px-3 py-4 text-sm font-medium text-blue-600">
-                {transfer.mmsi}
+                {getVesselName(transfer.mmsi)}
               </td>
               <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                 {transfer.location}
