@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
+
 import { TransferTable } from "./TransferTable";
 import { TransferDrawer } from "./TransferDrawer";
 import type { Transfer, Vessel } from "../types/types";
+import { API_URL } from "../../config";
 
 export const Dashboard: React.FC = () => {
   const [transfers, setTransfers] = useState<Transfer[]>([]);
@@ -18,8 +20,8 @@ export const Dashboard: React.FC = () => {
     const fetchData = async () => {
       try {
         const [transfersRes, vesselsRes] = await Promise.all([
-          fetch("http://localhost:3000/transfers"),
-          fetch("http://localhost:3000/vessels"),
+          fetch(`${API_URL}/transfers`),
+          fetch(`${API_URL}/vessels`),
         ]);
 
         const transfersData = await transfersRes.json();
@@ -48,7 +50,7 @@ export const Dashboard: React.FC = () => {
     setSelectedTransfer(null);
 
     try {
-      await fetch(`http://localhost:3000/transfers/${updatedTransfer.id}`, {
+      await fetch(`${API_URL}/transfers/${updatedTransfer.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedTransfer),
