@@ -36,6 +36,25 @@ export const Dashboard: React.FC = () => {
     fetchData();
   }, []);
 
+  const handleSave = async (updatedTransfer: Transfer) => {
+    setTransfers((prev) =>
+      prev.map((transfer) =>
+        transfer.id === updatedTransfer.id ? updatedTransfer : transfer
+      )
+    );
+    setSelectedTransfer(null);
+
+    try {
+      await fetch(`http://localhost:3000/transfers/${updatedTransfer.id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedTransfer),
+      });
+    } catch (error) {
+      console.error("Error saving transfer:", error);
+    }
+  };
+
   if (loading) return <div className="p-8">Loading dashboard...</div>;
 
   return (
@@ -66,6 +85,7 @@ export const Dashboard: React.FC = () => {
             transfer={selectedTransfer}
             allVessels={vessels}
             onClose={() => setSelectedTransfer(null)}
+            onSave={handleSave}
           />
         )}
       </div>

@@ -8,4 +8,4 @@ COPY db.json .
 
 EXPOSE 3000
 
-CMD ["json-server", "--watch", "db.json"]
+CMD ["json-server", "--watch", "/json-api/db.json"]
